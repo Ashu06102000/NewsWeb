@@ -1,0 +1,80 @@
+.navbar{
+    background: rgb(0, 119, 255);
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 100px;
+    margin-top: 50px;
+   
+}
+.navbar .logo{
+    color: white;
+    font-weight: 100;
+    text-transform: uppercase;
+    
+}
+.navbar ul{
+    display: flex;
+ 
+}
+.navbar .menuUl li {
+    display: flex;
+text-decoration: none;
+padding-left: 10px;
+padding-right: 10px;
+text-transform: uppercase;
+
+}
+.navbar .menuUl li .links_bar{
+    text-decoration: none;
+    color: white;
+}
+.navbar .Mobile-menuUl{
+    display: flex;
+
+}
+.navbar .Mobile-menuUl li{
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.menus{
+    visibility: hidden;
+    position: absolute;
+}
+.navbar .Mobile-menuUl{
+    display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  align-items: center;
+  height: 100vh;
+}
+@media (max-width:991px){
+    .navbar{
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    .navbar .Mobile-menuUl{
+        flex-direction: column;
+    }
+    .navbar ul {
+        display: none ;
+    }
+    .menus{
+        visibility: visible;
+        position: relative;
+        max-width: 20px;
+        margin-right: 5px;
+    }
+   
+    .menus img{
+        max-width: 20px;
+    }
+    .navbar .logo{
+       font-size: 8px;
+       margin-left: 5px;
+    }
+
+}
