@@ -9,7 +9,7 @@
   
   .content-wrapper {
     margin: 0 auto;
-    width: 330px;
+    width: 470px;
 
     display: flex;
     flex-flow: row wrap;
@@ -21,7 +21,7 @@
    
     margin: 0.5rem;
     position: relative;
-    height: 30rem;
+    height: 32rem;
     overflow: hidden;
     border-radius: 0.2rem;
     flex: 1;
@@ -85,6 +85,8 @@
   .news-card__title {
       transition: color 1s ease;
       margin-bottom: .5rem;
+      font-family: NeueHaasGroteskDisp Pro;
+      font-weight: 100;
     }
   
   .news-card__post-date {
@@ -153,7 +155,7 @@
       }
       @media (max-width: 900px){
         .content-wrapper{
-            max-width: 300px;
+            max-width: 350px;
         }
         .news-card {
             height: 20rem

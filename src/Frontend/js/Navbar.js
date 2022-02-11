@@ -1,10 +1,10 @@
-import React,{useState} from "react";
-import '../CSS/Navbar.css';
+import React, { useState } from "react";
+import "../CSS/Navbar.css";
 import { Link } from "react-router-dom";
-import menu from '../images/menu.png'
+import menu from "../images/menu.png";
 
 function Navbar() {
-  const [bar , setBar] = useState(false);
+  const [bar, setBar] = useState(false);
   return (
     <div>
       <div className="navbar">
@@ -13,42 +13,66 @@ function Navbar() {
         </div>
         <ul className={bar ? " menuUl Mobile-menuUl" : "menuUl"}>
           <li>
-            <Link onClick={()=> setBar(false)} className="links_bar" to="/">
+            <Link onClick={() => setBar(false)} className="links_bar" to="/">
               general
             </Link>
           </li>
           <li>
-            <Link onClick={()=> setBar(false)} className="links_bar" to="/health">
+            <Link
+              onClick={() => setBar(false)}
+              className="links_bar"
+              to="/health"
+            >
               health
             </Link>
           </li>
           <li>
-            <Link onClick={()=> setBar(false)} className="links_bar" to="/entertainment">
+            <Link
+              onClick={() => setBar(false)}
+              className="links_bar"
+              to="/entertainment"
+            >
               entertainment
             </Link>
           </li>
           <li>
-            <Link onClick={()=> setBar(false)} className="links_bar" to="/sports">
+            <Link
+              onClick={() => setBar(false)}
+              className="links_bar"
+              to="/sports"
+            >
               sports
             </Link>
           </li>
           <li>
-            <Link onClick={()=> setBar(false)} className="links_bar" to="/science">
+            <Link
+              onClick={() => setBar(false)}
+              className="links_bar"
+              to="/science"
+            >
               science
             </Link>
           </li>
           <li>
-            <Link onClick={()=> setBar(false)} className="links_bar" to="/business">
+            <Link
+              onClick={() => setBar(false)}
+              className="links_bar"
+              to="/business"
+            >
               business
             </Link>
           </li>
           <li>
-            <Link onClick={()=> setBar(false)} className="links_bar" to="/technology">
+            <Link
+              onClick={() => setBar(false)}
+              className="links_bar"
+              to="/technology"
+            >
               technology
             </Link>
           </li>
         </ul>
-        <div className="menus" onClick={()=> setBar(!bar)}>
+        <div className="menus" onClick={() => setBar(!bar)}>
           <img src={menu} alt="" />
         </div>
       </div>
