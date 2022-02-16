@@ -3,59 +3,46 @@ import News from "../src/Frontend/js/News";
 import Navbar from "./Frontend/js/Navbar";
 import { Route, Routes } from "react-router-dom";
 import { useState } from "react";
-import fix from './Frontend/images/mode.jpg'
+import fix from "./Frontend/images/mode.jpg";
 function App() {
   const [country, SetCountry] = useState("in");
-  const [mode, setMode] = useState();
-  const toggle = () => {
-    if (mode === "black") {
-      setMode("white");
-      document.body.style.backgroundColor = "white";
-    } else {
-      setMode("black");
-      document.body.style.backgroundColor = "black";
-    }
-  };
+
   return (
     <>
       <div>
-        <div onClick={toggle} style={{position:'fixed'}} className="mode">
-          <img style={{width:'50px',marginTop:'120px'}} src={fix} alt="" />
-        </div>
         <Navbar />
         <div
           style={{
             display: "flex",
             justifyContent: "center",
             marginBottom: "10px",
-            alignItems: "center"
-            
+            alignItems: "center",
           }}
           className="selector"
         >
-          <p  style={{  color: 'rgb(0, 119, 255)', marginRight: "10px", textAlign: "center" ,fontFamily:' font-family: NeueHaasGroteskDisp Pro'}} >select your country </p>
-          <select style={{height:'25px',width:'100px'}}
+          <p
+            style={{
+              color: "black",
+              marginRight: "10px",
+              textAlign: "center",
+              fontFamily: " font-family: NeueHaasGroteskDisp Pro",
+            }}
+          >
+            select your country{" "}
+          </p>
+          <select
+            style={{ height: "25px", width: "100px" }}
             value={country}
             onChange={(e) => {
               const SelectCountry = e.target.value;
               SetCountry(SelectCountry);
             }}
           >
-            <option value="in">
-            India
-            </option>
-            <option  value="us">
-              United State
-            </option>
-            <option  value="jp">
-              Japan
-            </option>
-            <option  value="gr">
-              Germany
-            </option>
-            <option  value="fr">
-              France
-            </option>
+            <option value="in">India</option>
+            <option value="us">United State</option>
+            <option value="jp">Japan</option>
+            <option value="gr">Germany</option>
+            <option value="fr">France</option>
           </select>
         </div>
         <Routes>
@@ -116,7 +103,7 @@ function App() {
           />
           <Route
             path="/sports"
-            element={<News key="sports" pageSize={100} category="sports" />}
+            element={<News key="sports" pageSize={100} category="sports"  country={country} />}
           />
           <Route
             path="/entertainment"

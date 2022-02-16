@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import NewsComponent from "../js/NewsComponent";
 import "../CSS/News.css";
 
-function News({ country, category, pageSize,mode }) {
+function News({ country, category, pageSize}) {
   const [data, setData] = useState([]);
   const [search, setSearch] = useState("");
 
@@ -37,7 +37,7 @@ function News({ country, category, pageSize,mode }) {
           className="Search"
         >
           <p
-            style={{  color:' rgb(0, 119, 255)', marginRight: "10px", textAlign: "center" }}
+            style={{  color:' black', marginRight: "10px", textAlign: "center" }}
           >
             Search News
           </p>
